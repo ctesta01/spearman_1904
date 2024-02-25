@@ -1,0 +1,173 @@
+---
+execute:
+    echo: false
+    warning: false
+    message: false
+    cache: false
+format:
+  revealjs:
+    width: 1600
+    height: 900
+    theme: [default, style.scss]
+    slide-number: true
+    fig-cap-location: top
+    fig-format: svg
+    pdf-separate-fragments: false
+---
+
+## {background-image="https://source.unsplash.com/CNBRg1K9QvQ" visibility="uncounted" data-background-opacity="0.5" data-background-color="black"}
+
+::: {.title}
+On Charles Spearman's 1904 work, "'General Intelligence,' Objectively Determined and Measured"
+:::
+
+::: {.author}
+Christian Testa and Anne Brandes
+:::
+
+::: {.date}
+`r format(Sys.time(), "%B %d, %Y")`
+:::
+
+# Introduction {background-color="#1C5253" visibility="uncounted"}
+
+  - Who was Charles Spearman 
+  - What were his motivations in writing?
+  - Main arguments
+
+## Who was Charles Spearman?
+
+:::{.columns}
+:::{.column width="50%"}
+
+  - Known for his work in psychology, Spearman was born in London in 1863 and died in 1945. His most 
+  famous work was on [human intelligence]{.emphasis}
+  - He served in the army from 1883 to 1897, and then went to study at the University of Leipzig, where he was influenced by Wilhelm Wundt, the father of experimental psychology, or ["new psychology"]{.emphasis}
+    - I.e., used empirical methods instead of 
+    metaphysical reasoning
+  - He was recalled to the army during the Second Boer War and served as a general
+  - Somehow, amidst all this, he published 
+  his most famous work in [1904]{.emphasis}
+:::
+:::
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Exposition_universelle_de_1900_-_portraits_des_commissaires_g%C3%A9n%C3%A9raux-Edmund_Robert_Spearman.jpg/770px-Exposition_universelle_de_1900_-_portraits_des_commissaires_g%C3%A9n%C3%A9raux-Edmund_Robert_Spearman.jpg){.absolute top="10%" right="10%" width="30%"}
+
+::: footer
+Image from [Wikipedia: Charles Spearman](https://en.wikipedia.org/wiki/Charles_Spearman)
+:::
+
+## Who was Charles Spearman?
+
+:::{.columns}
+:::{.column width="50%"}
+
+  - Spearman was heavily persuaded by Galton's work, particularly the 
+  creation of ["Co-relation"]{.emphasis} from 1888. 
+    - [See, for example, Stigler's 1989 article [Francis Galton's Account of the Invention of Correlation](https://www.jstor.org/stable/2245329?seq=5)]{.small}
+  - He was also influenced by the work of the French psychologist Alfred Binet, who was working on the first intelligence tests, e.g., ["intelligence quotients"]{.emphasis}
+  - His seminal 1904 work posits that intelligence rests on a single, general (latent) factor, which he called ["g"]{.emphasis}
+    - This was the first work in the field now called [factor analysis]{.emphasis}
+  - He also developed [rank correlation]{.emphasis}
+:::
+:::
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Exposition_universelle_de_1900_-_portraits_des_commissaires_g%C3%A9n%C3%A9raux-Edmund_Robert_Spearman.jpg/770px-Exposition_universelle_de_1900_-_portraits_des_commissaires_g%C3%A9n%C3%A9raux-Edmund_Robert_Spearman.jpg){.absolute top="10%" right="10%" width="30%"}
+
+
+::: footer
+Image from [Wikipedia: Charles Spearman](https://en.wikipedia.org/wiki/Charles_Spearman)
+:::
+
+
+## What were his motivations in writing?
+
+:::{.columns}
+:::{.column width='55%'}
+:::
+:::{.column width='45%'}
+<br>
+<br>
+
+He sees psychology as an up-and-coming field, and yet 
+also a subject looked down-upon by the scientific community. 
+
+<br><br>
+
+He's trying to make a case for psychology as a science, rooted in 
+data analysis and empirical methods.
+:::
+:::
+
+![](images/1_intro.png){.absolute top='10%' left='0%'}
+
+## What were his motivations in writing?
+
+:::{.columns}
+:::{.column width='55%'}
+:::
+:::{.column width='45%'}
+<br>
+<br>
+
+He is making clear he intends to lay down the [scientific 
+foundations of psychology]{.emphasis}, which will be (implicitly) comparable to 
+Newton's equations of motion — 
+
+<br>
+Especially with an eye towards 
+refuting the criticisms of psychology as puttering about. 
+:::
+:::
+
+![](images/2_weaknesses.png){.absolute width='50%' top='10%' left='0%'}
+
+## What were his main arguments? 
+
+:::{.columns}
+:::{.column width='45%'}
+<br><br>
+Spearman was analyzing data on children's performance across various school
+tests, and he found that the scores were correlated. 
+<br><br>
+
+In analyzing the data and their correlations, he hypothesized that 
+there was a [single, general factor]{.emphasis} that was responsible for the correlations
+and he called this [the "g" factor]{.emphasis}.
+
+:::
+:::
+
+![](images/3_wiki_cor.png){.absolute top='10%' right='0%' width='40%'}
+
+::: footer
+Table from [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psychometrics%29)
+:::
+
+## What were his main arguments?
+
+![](images/4_aims.png){.absolute top='10%' left='0%' width='50%'}
+
+![](images/5_spearman_model.jpg){.absolute top='50%' right='0%' width='40%'}
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/61/Chabris2007a.svg){.absolute top='10%' right='25%' width='25%'}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SpearmanFactors.svg/800px-SpearmanFactors.svg.png){.absolute top='10%' right='0%' height='35%'}
+
+
+# So let's get into it {background-color="#1C5253" visibility="uncounted"}
+
+:::{.incremental .large}
+  - What was the [structure]{.emphasis2} of his 1904 paper?
+  - What [data]{.emphasis2} did he use?
+  - What were the [methodological innovations]{.emphasis2}? 
+  - How did he [interpret]{.emphasis2} his findings?
+  - What were the [implications]{.emphasis2} of his work?
+:::
+
+
+# Plan for the rest of the slides
+
+- Go over the rest of the 1904 paper 
+- Have a section on contemporary uses of factor analysis
+- Discuss the Bartholomew, Gould, Michell, and possibly Glymour papers
