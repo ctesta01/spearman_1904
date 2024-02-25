@@ -15,6 +15,50 @@ format:
     pdf-separate-fragments: false
 ---
 
+
+::: content-hidden
+$$
+\newcommand{\E}[0]{\mathbb{E}}
+\newcommand{\P}[0]{\mathbb{P}}
+\newcommand{\V}[0]{\mathbb{V}}
+\newcommand{\EX}[0]{\mathbb{E} X}
+\newcommand{\EY}[0]{\mathbb{E} Y}
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\t}[1]{\text{#1}}
+\newcommand{\b}[1]{\mathbf{#1}}
+\newcommand{\tt}[1]{\mathtt{#1}}
+\newcommand{\T}[0]{\mathtt{T}}
+\newcommand{\iid}[0]{\text{iid}}
+\newcommand{\and}[0]{\text{and}}
+\newcommand{\supp}[0]{\text{supp}}
+\newcommand{\pp}[2][]{\frac{\partial#1}{\partial#2}}
+\newcommand{\dd}[2][]{\frac{\mathrm d#1}{\mathrm d#2}}
+\newcommand{\d}[0]{\mathrm d}
+\newcommand{\expit}[0]{\text{expit}}
+
+% 1 create conditionally independent symbol:
+\newcommand\independent{\perp\!\!\!\perp}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\newcommand{\Var}[0]{\text{Var}}
+\newcommand{\Cov}[0]{\text{Cov}}
+\newcommand{\Cor}[0]{\text{Cor}}
+\newcommand{\e}[0]{\varepsilon}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+
+\newcommand{\argmax}[0]{\text{argmax}}
+\newcommand{\argmin}[0]{\text{argmin}}
+
+\newcommand{\sumint}[0]{\;\;\;\mathclap{\displaystyle\int}\mathclap{\textstyle\sum} \;\;\;}
+\newcommand{\align}[1]{\begin{aligned} #1 \end{aligned}}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\DeclareMathOperator*{\plim}{p-lim}
+
+\require{mathtools}
+$$
+:::
+
 ## {background-image="https://source.unsplash.com/CNBRg1K9QvQ" visibility="uncounted" data-background-opacity="0.5" data-background-color="black"}
 
 ::: {.title}
@@ -28,6 +72,21 @@ Christian Testa and Anne Brandes
 ::: {.date}
 `r format(Sys.time(), "%B %d, %Y")`
 :::
+
+::: {.notes}
+Why the chess background? 
+
+Ability in chess is often perceived as a stereotypical 
+example of intelligence, but of course it's reasonable that 
+a great chess player may be lacking in other areas of life 
+such as social skills or emotional intelligence.
+
+I'm not sure if we'll discuss "Emotional Intelligence" introduced 
+by Salovey and Mayer in 1990, but it's worth thinking about 
+where intelligence ends and other abilities begin as a limitation
+of the philosophy expressed by Spearman behind the "g" factor. 
+:::
+
 
 # Introduction {background-color="#1C5253" visibility="uncounted"}
 
@@ -101,6 +160,10 @@ data analysis and empirical methods.
 
 ![](images/1_intro.png){.absolute top='10%' left='0%'}
 
+::: footer
+Page 202
+:::
+
 ## What were his motivations in writing?
 
 :::{.columns}
@@ -121,6 +184,10 @@ refuting the criticisms of psychology as puttering about.
 :::
 
 ![](images/2_weaknesses.png){.absolute width='50%' top='10%' left='0%'}
+
+::: footer 
+Page 203
+:::
 
 ## What were his main arguments? 
 
@@ -154,6 +221,9 @@ Table from [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psyc
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SpearmanFactors.svg/800px-SpearmanFactors.svg.png){.absolute top='10%' right='0%' height='35%'}
 
+::: footer
+Page 205; [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psychometrics%29)
+:::
 
 # So let's get into it {background-color="#1C5253" visibility="uncounted"}
 
@@ -166,8 +236,391 @@ Table from [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psyc
 :::
 
 
-# Plan for the rest of the slides
+## Plan for the rest of the slides
 
 - Go over the rest of the 1904 paper 
 - Have a section on contemporary uses of factor analysis
 - Discuss the Bartholomew, Gould, Michell, and possibly Glymour papers
+
+# Structure of Spearman, 1904
+
+After his introduction to the state of psychology and
+prior work, Spearman lays out his analysis plan for 
+data collected on school children's performance in **"discrimination"**
+and **"intelligence"** tests. 
+
+He covers some preliminarys on 
+how to calculate correlation coefficients, including a
+method for **"elimiation of observational errors"**
+and **"elimination of irrelevant factors."** (It's in Chapter II that he 
+introduces rank correlation).
+
+For a series of experiments, he presents the results of his 
+correlational analyses 
+with particular emphasis on 1) *detrending for age*, and 2) 
+investigating *which of the tests are correlated with each other*.
+
+Finally, he concludes with an analysis of the **"General Intelligence"
+factor**. 
+
+## State of the art in 1904
+
+![](images/6_state_of_art0.png){fig-align='center'}
+
+::: footer 
+Page 208
+:::
+
+## State of the art in 1904
+
+![](images/6_state_of_art1.png){fig-align='center'}
+
+::: footer
+Page 217
+:::
+
+## State of the art in 1904
+
+![](images/6_state_of_art2.png){.absolute top='20%' }
+
+::: footer
+Page 211
+:::
+
+## State of the art in 1904
+
+![](images/6_state_of_art3.png){.absolute top='10%' left='15%'}
+
+::: footer
+Page 235
+:::
+
+## State of the art in 1904
+
+![](images/6_state_of_art4.png){.absolute top='10%' left='20%'}
+
+::: footer
+Page 211
+:::
+
+## State of the art in 1904
+
+![](images/6_state_of_art5.png){.absolute top='10%' left='25%'}
+
+::: footer
+Page 218
+:::
+
+## Data used
+
+Spearman collected the following data:
+
+  - Experiment I used the 24 oldest children tested in **Light**, **Weight**, and **Sound**
+  - Experiment II used the next 36 oldest children with tests only on **Sound**, *interviewed collectively*.
+  - Experiment III on **Sight** and **Weight** discrimination among boys from a preparatory school
+  - Experiment IV on **Sound** only in the high class preparatory school boys, with only particular intervals tested
+  - Experiment V, similar to experiment I with boys and girls, but aiming for **higher variation** 
+  rather than homogeneity 
+
+## Intelligence Measures 
+
+  - Examination scores and school rankings were thought to reveal ["Present Capacity"]{.emphasis}
+  - School rankings divided by age were dubbed ["Native Capacity"]{.emphasis}
+  - Teachers were asked to rank students based on their ["general impression"]{.emphasis}
+  (e.g., based on if they seemed "bright", "average", "dull")
+  - Using a similar technique, the oldest of the children of Series I was  asked to rank peer students based on their ["common sense"]{.emphasis}, and then the next oldest child was asked to do the same. 
+
+## Correlation 
+
+![](images/7_correlation.png){.absolute top='10%' left='15%' width='75%'}
+![](images/7_correlation2.png){.absolute top='50%' left='15%' width='75%'}
+
+::: footer 
+Page 252 
+:::
+
+## Correlation — Elimination of Observational Errors
+
+![](images/7_cor_correct1.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer 
+Page 253
+:::
+
+## Correlation — Elimination of Irrelevant Factors
+
+![](images/7_cor_correct2.png)
+
+::: footer 
+Page 256
+:::
+
+# Results (intermangled with Interpretation)  {background-color="#1C5253" visibility="uncounted"}
+
+## Experiment I 
+
+![](images/8_results.png){.absolute top='10%' left='15%' width='75%'}
+
+## Let's Check His Math
+
+What is the "probable error" of a correlation coefficient?
+
+:::{.fragment}
+I'm not immediately sure about the distribution for Spearman's rank correlation 
+coefficient, but Pearson's product-moment correlation has a known distribution.
+:::
+
+:::{.fragment}
+The distribution for a sample correlation coefficient for correlated
+random normal variables is a little bit crazy...
+
+$$
+f(r) = \frac{(n-2) \Gamma(n-1)(1 - \rho^2)^{\frac{n-1}{2}} (1-r^2)^{\frac{n-4}{2}}}{ \sqrt{2\pi} \Gamma(n-\frac{1}{2})(1-\rho r)^{n - \frac{3}{2}} } {}_{2}{F}_1\left(\frac{1}{2}, \frac{1}{2}; \frac{1}{2}(2n-1); \frac{1}{2}(\rho r + 1)\right)
+$$
+:::
+
+:::{.fragment}
+But for uncorrelated variables (the null hypothesis), the distribution is much simpler: 
+
+$$
+f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
+  \sqrt{n-2} B\left( \frac{1}{2}, \frac{n-2}{2} \right)
+},
+$$
+
+where $B$ is the Beta function and ${}_2{F}_1$ is the Gaussian hypergeometric function.
+:::
+
+::: footer
+From <https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution>
+:::
+
+## Checking his math
+
+:::{.columns}
+:::{.column width='50%'}
+```{r}
+#| echo: true
+#| eval: false
+
+#' The Probability Density for the Correlation Coefficient for
+#' Uncorrelated Normal Distributions
+#' 
+#' @param r The observed Pearson correlation
+#' @param n The sample size 
+#' 
+#' @details 
+#' More details can be found here:
+#' <https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution>
+#' 
+#' A more complicated formula exists for the density of Pearson 
+#' correlation statistics calculated from bivariate normal 
+#' distributions with rho != 0.
+#' 
+#' The reason for the inclusion of a normalizing constant was that I found that 
+#' integrating from -1 to 1 for positive integers n was not reflecting properly that 
+#' P(r in [-1,1]) = 1.
+#' 
+cor_coef_density <- function(r, n) {
+
+  unnormalized_density <- function(r, n) {
+    (1/(1-r^2))^{-(n-1)/2} / (sqrt(n-2) * beta(1/2, (n-2)/2))
+  }
+
+  normalizing_constant_for_n <- integrate(f = unnormalized_density, lower = -1, upper = 1, n = n)[[1]]
+
+  return(unnormalized_density(r, n) / normalizing_constant_for_n)
+
+}
+
+# Probability of observing correlation coefficient of at least .25:
+integrate(f = cor_coef_density, lower = 0.25, upper = 1, n = 100)
+integrate(f = cor_coef_density, lower = 0.25, upper = 1, n = 20)
+# In either sample sizes of 100 or 25, the probability of observing a 
+
+# Had to correct for the normalizing constant...
+integrate(f = cor_coef_density, lower = -1, upper = 1, n = 20)
+
+
+# Now check if it's right under a simulation study 
+n <- 24L
+n_sims <- 100000L
+observed_r <- numeric(length = n_sims)
+for (i in 1:n_sims) {
+  X <- rnorm(n = n)
+  Y <- rnorm(n = n)
+  observed_r[i] <- cor(X,Y)
+}
+
+sd(observed_r)
+
+library(ggplot2)
+
+# looks like perhaps the approximation is slightly off? but it looks largely
+# correct — and importantly, it seems to covary with the population size in the
+# right way 
+ggplot() + 
+  geom_histogram(
+    data = data.frame(observed_r = observed_r),
+    mapping = aes(x = observed_r, y = ..density..),
+    bins = 100, alpha = 0.6) + 
+  geom_line(
+    tibble::tibble(
+      x = seq(-1,1,length.out=1000),
+      y = cor_coef_density(r = x, n = n)),
+    mapping = aes(x = x, y = y),
+    linetype = 'solid', color = '#16a085', linewidth=1.5, alpha = 0.8) + 
+  geom_vline(
+    xintercept = 0.2088,
+    linetype = 'dashed') + 
+  annotate(
+    geom = 'label',
+    label = expression(sigma[r] == "0.2088"),
+    x = .35,
+    y = 1.5) + 
+  labs(x = "observed sample correlation, r", y = 'density') + 
+  ggtitle("Correlation of random normal variables under the null") + 
+  theme_bw() 
+```
+:::
+:::
+
+![](images/9_math_checking.png){.absolute top='10%' right='0%' width='50%'}
+
+## Adjusting for "irrelevant factors"
+
+![](images/10_adjustment.png){.absolute top='10%' left='15%' width='75%'}
+![](images/10_adjustment2.png){.absolute top='45%' left='15%' width='75%'}
+
+::: footer
+Page 261-262
+:::
+
+## Conclusions from Experiment I 
+
+![](images/11_correlation.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 263
+:::
+
+## Experiment II 
+
+![](images/12_experiment2.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 264
+:::
+
+## Experiment III
+
+![](images/13_experiment3.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 265
+:::
+
+## Experiment IV
+
+![](images/14_experiment4.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 265
+:::
+
+## Conclusions of Experiments 
+
+![](images/15_conclusions.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 268
+:::
+
+## Interpretation 
+
+![](images/18_gi_gd.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 269
+:::
+
+## Conclusions of Experiments 
+
+![](images/16_conclusions.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 272
+:::
+
+## A "Theorem"
+
+![](images/17_theorem.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 273
+:::
+
+## Hierarchy of Factors
+
+![](images/19_hierarchy1.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 274
+:::
+
+## Hierarchy of Factors
+
+![](images/19_hierarchy2.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer 
+Page 275
+:::
+
+## Hierarchy of Factors
+
+![](images/19_hierarchy3.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 276
+:::
+
+## His Discussion 
+
+![](images/20_discussion.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer 
+Page 284
+:::
+
+## His Discussion 
+
+![](images/20_discussion2.png){.absolute top='10%' left='15%' width='75%'}
+
+::: footer
+Page 284
+:::
+
+
+## Appendix 
+
+![](images/21_appendix.png){.absolute top='10%' left='15%'}
+
+::: footer 
+Page 286
+:::
+
+## Appendix 
+
+![](images/21_appendix2.png){.absolute top='10%' left='15%'}
+
+::: footer 
+Page 287
+:::
+
+## Appendix 
+
+![](images/21_appendix3.png){.absolute top='10%' left='15%' }
+
+::: footer 
+Page 288
+:::

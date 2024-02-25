@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -334,6 +398,21 @@
 <div class="date">
 <p>February 25, 2024</p>
 </div>
+<aside class="notes">
+<p>Why the chess background?</p>
+<p>Ability in chess is often perceived as a stereotypical example of intelligence, but of course it’s reasonable that a great chess player may be lacking in other areas of life such as social skills or emotional intelligence.</p>
+<p>I’m not sure if we’ll discuss “Emotional Intelligence” introduced by Salovey and Mayer in 1990, but it’s worth thinking about where intelligence ends and other abilities begin as a limitation of the philosophy expressed by Spearman behind the “g” factor.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section>
 <section id="introduction" class="title-slide slide level1 center" data-background-color="#1C5253" data-visibility="uncounted">
@@ -400,6 +479,9 @@
 </div>
 </div>
 <p><img data-src="images/1_intro.png" class="absolute" style="top: 10%; left: 0%; "></p>
+<div class="footer">
+<p>Page 202</p>
+</div>
 </section>
 <section id="what-were-his-motivations-in-writing-1" class="slide level2">
 <h2>What were his motivations in writing?</h2>
@@ -413,6 +495,9 @@
 </div>
 </div>
 <p><img data-src="images/2_weaknesses.png" class="absolute" style="top: 10%; left: 0%; width: 50%; "></p>
+<div class="footer">
+<p>Page 203</p>
+</div>
 </section>
 <section id="what-were-his-main-arguments" class="slide level2">
 <h2>What were his main arguments?</h2>
@@ -433,7 +518,11 @@
 <p><img data-src="images/5_spearman_model.jpg" class="absolute" style="top: 50%; right: 0%; width: 40%; "></p>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/6/61/Chabris2007a.svg" class="absolute" style="top: 10%; right: 25%; width: 25%; "></p>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SpearmanFactors.svg/800px-SpearmanFactors.svg.png" class="absolute" style="top: 10%; right: 0%; height: 35%; "></p>
+<div class="footer">
+<p>Page 205; <a href="https://en.wikipedia.org/wiki/G_factor_%28psychometrics%29">Wikipedia : g factor</a></p>
+</div>
 </section></section>
+<section>
 <section id="so-lets-get-into-it" class="title-slide slide level1 center" data-background-color="#1C5253" data-visibility="uncounted">
 <h1>So let’s get into it</h1>
 <div class="large">
@@ -446,18 +535,349 @@
 </ul>
 </div>
 </section>
-
-<section id="plan-for-the-rest-of-the-slides" class="title-slide slide level1 center">
-<h1>Plan for the rest of the slides</h1>
+<section id="plan-for-the-rest-of-the-slides" class="slide level2">
+<h2>Plan for the rest of the slides</h2>
 <ul>
 <li>Go over the rest of the 1904 paper</li>
 <li>Have a section on contemporary uses of factor analysis</li>
 <li>Discuss the Bartholomew, Gould, Michell, and possibly Glymour papers</li>
 </ul>
+</section></section>
+<section>
+<section id="structure-of-spearman-1904" class="title-slide slide level1 center">
+<h1>Structure of Spearman, 1904</h1>
+<p>After his introduction to the state of psychology and prior work, Spearman lays out his analysis plan for data collected on school children’s performance in <strong>“discrimination”</strong> and <strong>“intelligence”</strong> tests.</p>
+<p>He covers some preliminarys on how to calculate correlation coefficients, including a method for <strong>“elimiation of observational errors”</strong> and <strong>“elimination of irrelevant factors.”</strong> (It’s in Chapter II that he introduces rank correlation).</p>
+<p>For a series of experiments, he presents the results of his correlational analyses with particular emphasis on 1) <em>detrending for age</em>, and 2) investigating <em>which of the tests are correlated with each other</em>.</p>
+<p>Finally, he concludes with an analysis of the <strong>“General Intelligence” factor</strong>.</p>
+</section>
+<section id="state-of-the-art-in-1904" class="slide level2">
+<h2>State of the art in 1904</h2>
+
+<img data-src="images/6_state_of_art0.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Page 208</p>
+</div>
+</section>
+<section id="state-of-the-art-in-1904-1" class="slide level2">
+<h2>State of the art in 1904</h2>
+
+<img data-src="images/6_state_of_art1.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p>Page 217</p>
+</div>
+</section>
+<section id="state-of-the-art-in-1904-2" class="slide level2">
+<h2>State of the art in 1904</h2>
+<p><img data-src="images/6_state_of_art2.png" class="absolute" style="top: 20%; "></p>
+<div class="footer">
+<p>Page 211</p>
+</div>
+</section>
+<section id="state-of-the-art-in-1904-3" class="slide level2">
+<h2>State of the art in 1904</h2>
+<p><img data-src="images/6_state_of_art3.png" class="absolute" style="top: 10%; left: 15%; "></p>
+<div class="footer">
+<p>Page 235</p>
+</div>
+</section>
+<section id="state-of-the-art-in-1904-4" class="slide level2">
+<h2>State of the art in 1904</h2>
+<p><img data-src="images/6_state_of_art4.png" class="absolute" style="top: 10%; left: 20%; "></p>
+<div class="footer">
+<p>Page 211</p>
+</div>
+</section>
+<section id="state-of-the-art-in-1904-5" class="slide level2">
+<h2>State of the art in 1904</h2>
+<p><img data-src="images/6_state_of_art5.png" class="absolute" style="top: 10%; left: 25%; "></p>
+<div class="footer">
+<p>Page 218</p>
+</div>
+</section>
+<section id="data-used" class="slide level2">
+<h2>Data used</h2>
+<p>Spearman collected the following data:</p>
+<ul>
+<li>Experiment I used the 24 oldest children tested in <strong>Light</strong>, <strong>Weight</strong>, and <strong>Sound</strong></li>
+<li>Experiment II used the next 36 oldest children with tests only on <strong>Sound</strong>, <em>interviewed collectively</em>.</li>
+<li>Experiment III on <strong>Sight</strong> and <strong>Weight</strong> discrimination among boys from a preparatory school</li>
+<li>Experiment IV on <strong>Sound</strong> only in the high class preparatory school boys, with only particular intervals tested</li>
+<li>Experiment V, similar to experiment I with boys and girls, but aiming for <strong>higher variation</strong> rather than homogeneity</li>
+</ul>
+</section>
+<section id="intelligence-measures" class="slide level2">
+<h2>Intelligence Measures</h2>
+<ul>
+<li>Examination scores and school rankings were thought to reveal <span class="emphasis">“Present Capacity”</span></li>
+<li>School rankings divided by age were dubbed <span class="emphasis">“Native Capacity”</span></li>
+<li>Teachers were asked to rank students based on their <span class="emphasis">“general impression”</span> (e.g., based on if they seemed “bright”, “average”, “dull”)</li>
+<li>Using a similar technique, the oldest of the children of Series I was asked to rank peer students based on their <span class="emphasis">“common sense”</span>, and then the next oldest child was asked to do the same.</li>
+</ul>
+</section>
+<section id="correlation" class="slide level2">
+<h2>Correlation</h2>
+<p><img data-src="images/7_correlation.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "> <img data-src="images/7_correlation2.png" class="absolute" style="top: 50%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 252</p>
+</div>
+</section>
+<section id="correlation-elimination-of-observational-errors" class="slide level2">
+<h2>Correlation — Elimination of Observational Errors</h2>
+<p><img data-src="images/7_cor_correct1.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 253</p>
+</div>
+</section>
+<section id="correlation-elimination-of-irrelevant-factors" class="slide level2">
+<h2>Correlation — Elimination of Irrelevant Factors</h2>
+
+<img data-src="images/7_cor_correct2.png" class="r-stretch"><div class="footer">
+<p>Page 256</p>
+</div>
+</section></section>
+<section>
+<section id="results-intermangled-with-interpretation" class="title-slide slide level1 center" data-background-color="#1C5253" data-visibility="uncounted">
+<h1>Results (intermangled with Interpretation)</h1>
+
+</section>
+<section id="experiment-i" class="slide level2">
+<h2>Experiment I</h2>
+<p><img data-src="images/8_results.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+</section>
+<section id="lets-check-his-math" class="slide level2">
+<h2>Let’s Check His Math</h2>
+<p>What is the “probable error” of a correlation coefficient?</p>
+<div class="fragment">
+<p>I’m not immediately sure about the distribution for Spearman’s rank correlation coefficient, but Pearson’s product-moment correlation has a known distribution.</p>
+</div>
+<div class="fragment">
+<p>The distribution for a sample correlation coefficient for correlated random normal variables is a little bit crazy…</p>
+<p><span class="math display">\[
+f(r) = \frac{(n-2) \Gamma(n-1)(1 - \rho^2)^{\frac{n-1}{2}} (1-r^2)^{\frac{n-4}{2}}}{ \sqrt{2\pi} \Gamma(n-\frac{1}{2})(1-\rho r)^{n - \frac{3}{2}} } {}_{2}{F}_1\left(\frac{1}{2}, \frac{1}{2}; \frac{1}{2}(2n-1); \frac{1}{2}(\rho r + 1)\right)
+\]</span></p>
+</div>
+<div class="fragment">
+<p>But for uncorrelated variables (the null hypothesis), the distribution is much simpler:</p>
+<p><span class="math display">\[
+f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
+  \sqrt{n-2} B\left( \frac{1}{2}, \frac{n-2}{2} \right)
+},
+\]</span></p>
+<p>where <span class="math inline">\(B\)</span> is the Beta function and <span class="math inline">\({}_2{F}_1\)</span> is the Gaussian hypergeometric function.</p>
+</div>
+<div class="footer">
+<p>From <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution" class="uri">https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution</a></p>
+</div>
+</section>
+<section id="checking-his-math" class="slide level2">
+<h2>Checking his math</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#' The Probability Density for the Correlation Coefficient for</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">#' Uncorrelated Normal Distributions</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#' </span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#' @param r The observed Pearson correlation</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#' @param n The sample size </span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#' </span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#' @details </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#' More details can be found here:</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#' &lt;https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#' </span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#' A more complicated formula exists for the density of Pearson </span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#' correlation statistics calculated from bivariate normal </span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#' distributions with rho != 0.</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#' </span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#' The reason for the inclusion of a normalizing constant was that I found that </span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">#' integrating from -1 to 1 for positive integers n was not reflecting properly that </span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#' P(r in [-1,1]) = 1.</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#' </span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>cor_coef_density <span class="ot">&lt;-</span> <span class="cf">function</span>(r, n) {</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a>  unnormalized_density <span class="ot">&lt;-</span> <span class="cf">function</span>(r, n) {</span>
+<span id="cb1-22"><a href="#cb1-22"></a>    (<span class="dv">1</span><span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>r<span class="sc">^</span><span class="dv">2</span>))<span class="sc">^</span>{<span class="sc">-</span>(n<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">2</span>} <span class="sc">/</span> (<span class="fu">sqrt</span>(n<span class="dv">-2</span>) <span class="sc">*</span> <span class="fu">beta</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, (n<span class="dv">-2</span>)<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb1-23"><a href="#cb1-23"></a>  }</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a>  normalizing_constant_for_n <span class="ot">&lt;-</span> <span class="fu">integrate</span>(<span class="at">f =</span> unnormalized_density, <span class="at">lower =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> n)[[<span class="dv">1</span>]]</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a>  <span class="fu">return</span>(<span class="fu">unnormalized_density</span>(r, n) <span class="sc">/</span> normalizing_constant_for_n)</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a>}</span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co"># Probability of observing correlation coefficient of at least .25:</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="fl">0.25</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">100</span>)</span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="fl">0.25</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">20</span>)</span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="co"># In either sample sizes of 100 or 25, the probability of observing a </span></span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="co"># Had to correct for the normalizing constant...</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">20</span>)</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="co"># Now check if it's right under a simulation study </span></span>
+<span id="cb1-41"><a href="#cb1-41"></a>n <span class="ot">&lt;-</span> 24L</span>
+<span id="cb1-42"><a href="#cb1-42"></a>n_sims <span class="ot">&lt;-</span> 100000L</span>
+<span id="cb1-43"><a href="#cb1-43"></a>observed_r <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> n_sims)</span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_sims) {</span>
+<span id="cb1-45"><a href="#cb1-45"></a>  X <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> n)</span>
+<span id="cb1-46"><a href="#cb1-46"></a>  Y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> n)</span>
+<span id="cb1-47"><a href="#cb1-47"></a>  observed_r[i] <span class="ot">&lt;-</span> <span class="fu">cor</span>(X,Y)</span>
+<span id="cb1-48"><a href="#cb1-48"></a>}</span>
+<span id="cb1-49"><a href="#cb1-49"></a></span>
+<span id="cb1-50"><a href="#cb1-50"></a><span class="fu">sd</span>(observed_r)</span>
+<span id="cb1-51"><a href="#cb1-51"></a></span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-53"><a href="#cb1-53"></a></span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="co"># looks like perhaps the approximation is slightly off? but it looks largely</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="co"># correct — and importantly, it seems to covary with the population size in the</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="co"># right way </span></span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1-58"><a href="#cb1-58"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb1-59"><a href="#cb1-59"></a>    <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">observed_r =</span> observed_r),</span>
+<span id="cb1-60"><a href="#cb1-60"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> observed_r, <span class="at">y =</span> ..density..),</span>
+<span id="cb1-61"><a href="#cb1-61"></a>    <span class="at">bins =</span> <span class="dv">100</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span> </span>
+<span id="cb1-62"><a href="#cb1-62"></a>  <span class="fu">geom_line</span>(</span>
+<span id="cb1-63"><a href="#cb1-63"></a>    tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb1-64"><a href="#cb1-64"></a>      <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="at">length.out=</span><span class="dv">1000</span>),</span>
+<span id="cb1-65"><a href="#cb1-65"></a>      <span class="at">y =</span> <span class="fu">cor_coef_density</span>(<span class="at">r =</span> x, <span class="at">n =</span> n)),</span>
+<span id="cb1-66"><a href="#cb1-66"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y),</span>
+<span id="cb1-67"><a href="#cb1-67"></a>    <span class="at">linetype =</span> <span class="st">'solid'</span>, <span class="at">color =</span> <span class="st">'#16a085'</span>, <span class="at">linewidth=</span><span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span> </span>
+<span id="cb1-68"><a href="#cb1-68"></a>  <span class="fu">geom_vline</span>(</span>
+<span id="cb1-69"><a href="#cb1-69"></a>    <span class="at">xintercept =</span> <span class="fl">0.2088</span>,</span>
+<span id="cb1-70"><a href="#cb1-70"></a>    <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span> </span>
+<span id="cb1-71"><a href="#cb1-71"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-72"><a href="#cb1-72"></a>    <span class="at">geom =</span> <span class="st">'label'</span>,</span>
+<span id="cb1-73"><a href="#cb1-73"></a>    <span class="at">label =</span> <span class="fu">expression</span>(sigma[r] <span class="sc">==</span> <span class="st">"0.2088"</span>),</span>
+<span id="cb1-74"><a href="#cb1-74"></a>    <span class="at">x =</span> .<span class="dv">35</span>,</span>
+<span id="cb1-75"><a href="#cb1-75"></a>    <span class="at">y =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
+<span id="cb1-76"><a href="#cb1-76"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"observed sample correlation, r"</span>, <span class="at">y =</span> <span class="st">'density'</span>) <span class="sc">+</span> </span>
+<span id="cb1-77"><a href="#cb1-77"></a>  <span class="fu">ggtitle</span>(<span class="st">"Correlation of random normal variables under the null"</span>) <span class="sc">+</span> </span>
+<span id="cb1-78"><a href="#cb1-78"></a>  <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p><img data-src="images/9_math_checking.png" class="absolute" style="top: 10%; right: 0%; width: 50%; "></p>
+</section>
+<section id="adjusting-for-irrelevant-factors" class="slide level2">
+<h2>Adjusting for “irrelevant factors”</h2>
+<p><img data-src="images/10_adjustment.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "> <img data-src="images/10_adjustment2.png" class="absolute" style="top: 45%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 261-262</p>
+</div>
+</section>
+<section id="conclusions-from-experiment-i" class="slide level2">
+<h2>Conclusions from Experiment I</h2>
+<p><img data-src="images/11_correlation.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 263</p>
+</div>
+</section>
+<section id="experiment-ii" class="slide level2">
+<h2>Experiment II</h2>
+<p><img data-src="images/12_experiment2.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 264</p>
+</div>
+</section>
+<section id="experiment-iii" class="slide level2">
+<h2>Experiment III</h2>
+<p><img data-src="images/13_experiment3.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 265</p>
+</div>
+</section>
+<section id="experiment-iv" class="slide level2">
+<h2>Experiment IV</h2>
+<p><img data-src="images/14_experiment4.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 265</p>
+</div>
+</section>
+<section id="conclusions-of-experiments" class="slide level2">
+<h2>Conclusions of Experiments</h2>
+<p><img data-src="images/15_conclusions.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 268</p>
+</div>
+</section>
+<section id="interpretation" class="slide level2">
+<h2>Interpretation</h2>
+<p><img data-src="images/18_gi_gd.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 269</p>
+</div>
+</section>
+<section id="conclusions-of-experiments-1" class="slide level2">
+<h2>Conclusions of Experiments</h2>
+<p><img data-src="images/16_conclusions.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 272</p>
+</div>
+</section>
+<section id="a-theorem" class="slide level2">
+<h2>A “Theorem”</h2>
+<p><img data-src="images/17_theorem.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 273</p>
+</div>
+</section>
+<section id="hierarchy-of-factors" class="slide level2">
+<h2>Hierarchy of Factors</h2>
+<p><img data-src="images/19_hierarchy1.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 274</p>
+</div>
+</section>
+<section id="hierarchy-of-factors-1" class="slide level2">
+<h2>Hierarchy of Factors</h2>
+<p><img data-src="images/19_hierarchy2.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 275</p>
+</div>
+</section>
+<section id="hierarchy-of-factors-2" class="slide level2">
+<h2>Hierarchy of Factors</h2>
+<p><img data-src="images/19_hierarchy3.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 276</p>
+</div>
+</section>
+<section id="his-discussion" class="slide level2">
+<h2>His Discussion</h2>
+<p><img data-src="images/20_discussion.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 284</p>
+</div>
+</section>
+<section id="his-discussion-1" class="slide level2">
+<h2>His Discussion</h2>
+<p><img data-src="images/20_discussion2.png" class="absolute" style="top: 10%; left: 15%; width: 75%; "></p>
+<div class="footer">
+<p>Page 284</p>
+</div>
+</section>
+<section id="appendix" class="slide level2">
+<h2>Appendix</h2>
+<p><img data-src="images/21_appendix.png" class="absolute" style="top: 10%; left: 15%; "></p>
+<div class="footer">
+<p>Page 286</p>
+</div>
+</section>
+<section id="appendix-1" class="slide level2">
+<h2>Appendix</h2>
+<p><img data-src="images/21_appendix2.png" class="absolute" style="top: 10%; left: 15%; "></p>
+<div class="footer">
+<p>Page 287</p>
+</div>
+</section>
+<section id="appendix-2" class="slide level2">
+<h2>Appendix</h2>
+<p><img data-src="images/21_appendix3.png" class="absolute" style="top: 10%; left: 15%; "></p>
+<div class="footer">
+<p>Page 288</p>
+</div>
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
