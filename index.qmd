@@ -605,14 +605,24 @@ I thought it was often hard to understand what he was saying, especially around 
 
 ::: incremental
 -   Merits:
-    -   Asking teachers to rank their students on qualities like ["common sense"]{.emphasis} and ["general impression"]{.emphasis} was novel and what I would call an early 'psychometric instrument.'
+    -   Asking teachers to rank their students on qualities like ["common sense"]{.emphasis} and ["general impression"]{.emphasis} was novel and what I would call an early 'psychometric instrument'
+      - [Such an instrument might have reasonable reliability, but its validity 
+suffers from the fact that it's based on potentially biased impressions of teachers.]{.small}
     -   He was extraordinarily early in analyzing correlation matrices (though I'm not sure he formatted them like matrices) and recognizing their potential to have deeper structure.
     -   His work raises interesting questions about where "intelligence" ends and other skills begin.
     - His literature review is fascinating.
+:::
+
+# Reflections {background-color="black" background-image="https://source.unsplash.com/u21fFskAGZQ" data-background-opacity="30%"}
+
+:::{.incremental}
 -   Demerits:
+    -   He offers no reflection how culture and (inherently subjective) definitions
+    of intelligence interact.
     -   The text can be a **bit clunky**, and I think that's because he didn't have the language we have now like "Let $X$ be a random variable."
     -   While he does at times seem to be careful about calling for more investigation into what the General Intelligence factor is, *he very quickly concludes that 'General Intelligence' "really exists."*
 :::
+
 
 # Contemporary Uses of Factor Analysis {background-color="#1C5253"}
 
