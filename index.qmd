@@ -225,7 +225,7 @@ Page 205; [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psych
 
 After his introduction to the state of psychology and prior work, Spearman lays out his analysis plan for data collected on school children's performance in **"discrimination"** and **"intelligence"** tests.
 
-He covers some preliminarys on how to calculate correlation coefficients, including a method for **"elimiation of observational errors"** and **"elimination of irrelevant factors."** (It's in Chapter II that he introduces rank correlation).
+He covers some preliminarys on how to calculate correlation coefficients, including a method for **"elimination of observational errors"** and **"elimination of irrelevant factors."** (It's on Chapter II, pg 252 that he introduces rank correlation).
 
 For a series of experiments, he presents the results of his correlational analyses with particular emphasis on 1) *detrending for age*, and 2) investigating *which of the tests are correlated with each other*.
 
@@ -610,7 +610,7 @@ I thought it was often hard to understand what he was saying, especially around 
     -   His work raises interesting questions about where "intelligence" ends and other skills begin.
     - His literature review is fascinating.
 -   Demerits:
-    -   Though no fault of his own, the text can be a **bit clunky**, and I think that's because he didn't have the language we have now like "Let $X$ be a random variable."
+    -   The text can be a **bit clunky**, and I think that's because he didn't have the language we have now like "Let $X$ be a random variable."
     -   While he does at times seem to be careful about calling for more investigation into what the General Intelligence factor is, *he very quickly concludes that 'General Intelligence' "really exists."*
 :::
 
@@ -636,7 +636,9 @@ Thurstone in the 1930-50s, [factor analysis with multiple factors
 is now common.]{.emphasis}
 :::
 
+:::{.fragment}
 ![From <https://www.thetaminusb.com/intro-measurement-r/dimensionality.html>](https://www.thetaminusb.com/intro-measurement-r/images/efamodel.jpg)
+:::
 
 ## Example 
 
@@ -686,4 +688,26 @@ Glymour, Clark. “What Went Wrong? Reflections on Science by Observation and th
 :::{.column width='50%'}
 ![](images/26_glymour.png){width='550px'}
 :::
+:::
+
+# References {background-color="black" data-background-image='https://source.unsplash.com/3rWagdKBF7U' data-background-opacity='80%'}
+
+:::{style='font-size: 24px;'}
+Direct References: 
+
+  - Spearman, C. (1904). "General Intelligence," Objectively Determined and Measured. The American Journal of Psychology, 15(2), 201–293. <https://doi.org/10.2307/1412107>
+  - Bartholomew, D. J. (2007). Three faces of factor analysis. In R. Cudeck & R. C. MacCallum (Eds.), Factor analysis at 100: Historical developments and future directions (pp. 9–21). Lawrence Erlbaum Associates Publishers.
+  - Gould, S. J. (1981). Mismeasure of Man, Chapter 6: The Real Error of Cyril Burt. New York: Norton & Company 
+  - Michell, J. (2023). “Professor Spearman has drawn over-hasty conclusions”: Unravelling psychometrics’ “Copernican Revolution”. Theory & Psychology, 33(5), 661–680. <https://doi.org/10.1177/09593543231179446>
+  - Glymour, Clark. “What Went Wrong? Reflections on Science by Observation and the Bell Curve.” Philosophy of Science, vol. 65, no. 1, 1998, pp. 1–32. JSTOR, <http://www.jstor.org/stable/188173>. 
+
+Suggested References: 
+
+  - [William Revelle and the Personality Project (Writing Ongoing). "Ch. 6: Constructs, Components, and Factor models", *An introduction to psychometric theory with applications in R* <https://personality-project.org/r/book/>]{style='font-weight: 700;'}
+  - Spearman (1904). "The proof and measurement of association between two things." <https://archive.org/details/proofmeasurement00speauoft/mode/2up>
+  - "Factor analysis," Wikipedia, The Free Encyclopedia, <https://en.wikipedia.org/w/index.php?title=Factor_analysis&oldid=1197117979>. 
+  -  Stephen M. Stigler. "Francis Galton's Account of the Invention of Correlation." Statist. Sci. 4 (2) 73 - 79, May, 1989. https://doi.org/10.1214/ss/1177012580 
+  - Albano (2020). *"Introduction to Educational and Psychological Measurement Using R, Chapter 8 Factor Analysis"*.
+  <https://www.thetaminusb.com/intro-measurement-r/>, published via bookdown.
+  
 :::
