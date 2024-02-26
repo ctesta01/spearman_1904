@@ -5,9 +5,10 @@
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.269">
+  <meta name="generator" content="quarto-1.4.550">
 
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,11 +25,12 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -92,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -135,44 +137,44 @@
     font-weight: 400;
   }
 
-  .callout.callout-captioned.callout-style-simple .callout-body {
+  .callout.callout-titled.callout-style-simple .callout-body {
     margin-top: 0.2em;
   }
 
-  .callout:not(.callout-captioned) .callout-body {
+  .callout:not(.callout-titled) .callout-body {
       display: flex;
   }
 
-  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
     padding-left: 1.6em;
   }
 
-  .callout.callout-captioned .callout-header {
+  .callout.callout-titled .callout-header {
     padding-top: 0.2em;
     margin-bottom: -0.2em;
   }
 
-  .callout.callout-captioned .callout-caption  p {
+  .callout.callout-titled .callout-title  p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
     
-  .callout.callout-captioned.callout-style-simple .callout-content  p {
+  .callout.callout-titled.callout-style-simple .callout-content  p {
     margin-top: 0;
   }
 
-  .callout.callout-captioned.callout-style-default .callout-content  p {
+  .callout.callout-titled.callout-style-default .callout-content  p {
     margin-top: 0.7em;
   }
 
-  .callout.callout-style-simple div.callout-caption {
+  .callout.callout-style-simple div.callout-title {
     border-bottom: none;
     font-size: .9rem;
     font-weight: 600;
     opacity: 75%;
   }
 
-  .callout.callout-style-default  div.callout-caption {
+  .callout.callout-style-default  div.callout-title {
     border-bottom: none;
     font-weight: 600;
     opacity: 85%;
@@ -204,7 +206,7 @@
     background-size: 0.9rem 0.9rem;
   }
 
-  .callout-caption {
+  .callout-title {
     display: flex
   }
     
@@ -217,16 +219,17 @@
     display: none !important;
   }
 
-  .callout.callout-captioned .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
-  .callout.callout-captioned .callout-icon::before {
+  .callout.callout-titled .callout-icon::before {
     margin-top: .5rem;
     padding-right: .5rem;
   }
 
-  .callout:not(.callout-captioned) .callout-icon::before {
+  .callout:not(.callout-titled) .callout-icon::before {
     margin-top: 1rem;
     padding-right: .5rem;
   }
@@ -241,7 +244,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
   }
 
-  div.callout-note.callout-style-default .callout-caption {
+  div.callout-note.callout-style-default .callout-title {
     background-color: #dae6fb
   }
 
@@ -253,7 +256,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
   }
 
-  div.callout-important.callout-style-default .callout-caption {
+  div.callout-important.callout-style-default .callout-title {
     background-color: #f7dddc
   }
 
@@ -265,7 +268,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
   }
 
-  div.callout-warning.callout-style-default .callout-caption {
+  div.callout-warning.callout-style-default .callout-title {
     background-color: #fcefdc
   }
 
@@ -277,7 +280,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
   }
 
-  div.callout-tip.callout-style-default .callout-caption {
+  div.callout-tip.callout-style-default .callout-title {
     background-color: #ccf1e3
   }
 
@@ -289,7 +292,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
   }
 
-  div.callout-caution.callout-style-default .callout-caption {
+  div.callout-caution.callout-style-default .callout-title {
     background-color: #ffe5d0
   }
 
@@ -415,7 +418,7 @@
       }</style></aside>
 </section>
 <section>
-<section id="introduction" class="title-slide slide level1 center" data-background-color="#1C5253" data-visibility="uncounted">
+<section id="introduction" class="title-slide slide level1 center" data-background-color="#1C5253">
 <h1>Introduction</h1>
 <ul>
 <li>Who was Charles Spearman</li>
@@ -523,7 +526,7 @@
 </div>
 </section></section>
 <section>
-<section id="so-lets-get-into-it" class="title-slide slide level1 center" data-background-color="#1C5253" data-visibility="uncounted">
+<section id="so-lets-get-into-it" class="title-slide slide level1 center" data-background-color="#1C5253">
 <h1>So let’s get into it</h1>
 <div class="large">
 <ul>
@@ -554,14 +557,14 @@
 <section id="state-of-the-art-in-1904" class="slide level2">
 <h2>State of the art in 1904</h2>
 
-<img data-src="images/6_state_of_art0.png" class="r-stretch quarto-figure-center"><div class="footer">
+<img data-src="images/6_state_of_art0.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>Page 208</p>
 </div>
 </section>
 <section id="state-of-the-art-in-1904-1" class="slide level2">
 <h2>State of the art in 1904</h2>
 
-<img data-src="images/6_state_of_art1.png" class="r-stretch quarto-figure-center"><div class="footer">
+<img data-src="images/6_state_of_art1.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>Page 217</p>
 </div>
 </section>
@@ -635,7 +638,7 @@
 </div>
 </section></section>
 <section>
-<section id="results-intermangled-with-interpretation" class="title-slide slide level1 center" data-background-color="#1C5253" data-visibility="uncounted">
+<section id="results-intermangled-with-interpretation" class="title-slide slide level1 center" data-background-color="#1C5253">
 <h1>Results (intermangled with Interpretation)</h1>
 
 </section>
@@ -673,84 +676,84 @@ f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#' The Probability Density for the Correlation Coefficient for</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co">#' Uncorrelated Normal Distributions</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#' </span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#' @param r The observed Pearson correlation</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#' @param n The sample size </span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#' </span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#' @details </span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#' More details can be found here:</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#' &lt;https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#' </span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#' A more complicated formula exists for the density of Pearson </span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#' correlation statistics calculated from bivariate normal </span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#' distributions with rho != 0.</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#' </span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#' The reason for the inclusion of a normalizing constant was that I found that </span></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="co">#' integrating from -1 to 1 for positive integers n was not reflecting properly that </span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#' P(r in [-1,1]) = 1.</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#' </span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>cor_coef_density <span class="ot">&lt;-</span> <span class="cf">function</span>(r, n) {</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a>  unnormalized_density <span class="ot">&lt;-</span> <span class="cf">function</span>(r, n) {</span>
-<span id="cb1-22"><a href="#cb1-22"></a>    (<span class="dv">1</span><span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>r<span class="sc">^</span><span class="dv">2</span>))<span class="sc">^</span>{<span class="sc">-</span>(n<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">2</span>} <span class="sc">/</span> (<span class="fu">sqrt</span>(n<span class="dv">-2</span>) <span class="sc">*</span> <span class="fu">beta</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, (n<span class="dv">-2</span>)<span class="sc">/</span><span class="dv">2</span>))</span>
-<span id="cb1-23"><a href="#cb1-23"></a>  }</span>
-<span id="cb1-24"><a href="#cb1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a>  normalizing_constant_for_n <span class="ot">&lt;-</span> <span class="fu">integrate</span>(<span class="at">f =</span> unnormalized_density, <span class="at">lower =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> n)[[<span class="dv">1</span>]]</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a>  <span class="fu">return</span>(<span class="fu">unnormalized_density</span>(r, n) <span class="sc">/</span> normalizing_constant_for_n)</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a>}</span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="co"># Probability of observing correlation coefficient of at least .25:</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="fl">0.25</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">100</span>)</span>
-<span id="cb1-33"><a href="#cb1-33"></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="fl">0.25</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">20</span>)</span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="co"># In either sample sizes of 100 or 25, the probability of observing a </span></span>
-<span id="cb1-35"><a href="#cb1-35"></a></span>
-<span id="cb1-36"><a href="#cb1-36"></a><span class="co"># Had to correct for the normalizing constant...</span></span>
-<span id="cb1-37"><a href="#cb1-37"></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">20</span>)</span>
-<span id="cb1-38"><a href="#cb1-38"></a></span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a><span class="co"># Now check if it's right under a simulation study </span></span>
-<span id="cb1-41"><a href="#cb1-41"></a>n <span class="ot">&lt;-</span> 24L</span>
-<span id="cb1-42"><a href="#cb1-42"></a>n_sims <span class="ot">&lt;-</span> 100000L</span>
-<span id="cb1-43"><a href="#cb1-43"></a>observed_r <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> n_sims)</span>
-<span id="cb1-44"><a href="#cb1-44"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_sims) {</span>
-<span id="cb1-45"><a href="#cb1-45"></a>  X <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> n)</span>
-<span id="cb1-46"><a href="#cb1-46"></a>  Y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> n)</span>
-<span id="cb1-47"><a href="#cb1-47"></a>  observed_r[i] <span class="ot">&lt;-</span> <span class="fu">cor</span>(X,Y)</span>
-<span id="cb1-48"><a href="#cb1-48"></a>}</span>
-<span id="cb1-49"><a href="#cb1-49"></a></span>
-<span id="cb1-50"><a href="#cb1-50"></a><span class="fu">sd</span>(observed_r)</span>
-<span id="cb1-51"><a href="#cb1-51"></a></span>
-<span id="cb1-52"><a href="#cb1-52"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-53"><a href="#cb1-53"></a></span>
-<span id="cb1-54"><a href="#cb1-54"></a><span class="co"># looks like perhaps the approximation is slightly off? but it looks largely</span></span>
-<span id="cb1-55"><a href="#cb1-55"></a><span class="co"># correct — and importantly, it seems to covary with the population size in the</span></span>
-<span id="cb1-56"><a href="#cb1-56"></a><span class="co"># right way </span></span>
-<span id="cb1-57"><a href="#cb1-57"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb1-58"><a href="#cb1-58"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb1-59"><a href="#cb1-59"></a>    <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">observed_r =</span> observed_r),</span>
-<span id="cb1-60"><a href="#cb1-60"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> observed_r, <span class="at">y =</span> ..density..),</span>
-<span id="cb1-61"><a href="#cb1-61"></a>    <span class="at">bins =</span> <span class="dv">100</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span> </span>
-<span id="cb1-62"><a href="#cb1-62"></a>  <span class="fu">geom_line</span>(</span>
-<span id="cb1-63"><a href="#cb1-63"></a>    tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
-<span id="cb1-64"><a href="#cb1-64"></a>      <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="at">length.out=</span><span class="dv">1000</span>),</span>
-<span id="cb1-65"><a href="#cb1-65"></a>      <span class="at">y =</span> <span class="fu">cor_coef_density</span>(<span class="at">r =</span> x, <span class="at">n =</span> n)),</span>
-<span id="cb1-66"><a href="#cb1-66"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y),</span>
-<span id="cb1-67"><a href="#cb1-67"></a>    <span class="at">linetype =</span> <span class="st">'solid'</span>, <span class="at">color =</span> <span class="st">'#16a085'</span>, <span class="at">linewidth=</span><span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span> </span>
-<span id="cb1-68"><a href="#cb1-68"></a>  <span class="fu">geom_vline</span>(</span>
-<span id="cb1-69"><a href="#cb1-69"></a>    <span class="at">xintercept =</span> <span class="fl">0.2088</span>,</span>
-<span id="cb1-70"><a href="#cb1-70"></a>    <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span> </span>
-<span id="cb1-71"><a href="#cb1-71"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb1-72"><a href="#cb1-72"></a>    <span class="at">geom =</span> <span class="st">'label'</span>,</span>
-<span id="cb1-73"><a href="#cb1-73"></a>    <span class="at">label =</span> <span class="fu">expression</span>(sigma[r] <span class="sc">==</span> <span class="st">"0.2088"</span>),</span>
-<span id="cb1-74"><a href="#cb1-74"></a>    <span class="at">x =</span> .<span class="dv">35</span>,</span>
-<span id="cb1-75"><a href="#cb1-75"></a>    <span class="at">y =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
-<span id="cb1-76"><a href="#cb1-76"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"observed sample correlation, r"</span>, <span class="at">y =</span> <span class="st">'density'</span>) <span class="sc">+</span> </span>
-<span id="cb1-77"><a href="#cb1-77"></a>  <span class="fu">ggtitle</span>(<span class="st">"Correlation of random normal variables under the null"</span>) <span class="sc">+</span> </span>
-<span id="cb1-78"><a href="#cb1-78"></a>  <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="co">#' The Probability Density for the Correlation Coefficient for</span></span>
+<span id="cb1-2"><a href=""></a><span class="co">#' Uncorrelated Normal Distributions</span></span>
+<span id="cb1-3"><a href=""></a><span class="co">#' </span></span>
+<span id="cb1-4"><a href=""></a><span class="co">#' @param r The observed Pearson correlation</span></span>
+<span id="cb1-5"><a href=""></a><span class="co">#' @param n The sample size </span></span>
+<span id="cb1-6"><a href=""></a><span class="co">#' </span></span>
+<span id="cb1-7"><a href=""></a><span class="co">#' @details </span></span>
+<span id="cb1-8"><a href=""></a><span class="co">#' More details can be found here:</span></span>
+<span id="cb1-9"><a href=""></a><span class="co">#' &lt;https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_exact_distribution&gt;</span></span>
+<span id="cb1-10"><a href=""></a><span class="co">#' </span></span>
+<span id="cb1-11"><a href=""></a><span class="co">#' A more complicated formula exists for the density of Pearson </span></span>
+<span id="cb1-12"><a href=""></a><span class="co">#' correlation statistics calculated from bivariate normal </span></span>
+<span id="cb1-13"><a href=""></a><span class="co">#' distributions with rho != 0.</span></span>
+<span id="cb1-14"><a href=""></a><span class="co">#' </span></span>
+<span id="cb1-15"><a href=""></a><span class="co">#' The reason for the inclusion of a normalizing constant was that I found that </span></span>
+<span id="cb1-16"><a href=""></a><span class="co">#' integrating from -1 to 1 for positive integers n was not reflecting properly that </span></span>
+<span id="cb1-17"><a href=""></a><span class="co">#' P(r in [-1,1]) = 1.</span></span>
+<span id="cb1-18"><a href=""></a><span class="co">#' </span></span>
+<span id="cb1-19"><a href=""></a>cor_coef_density <span class="ot">&lt;-</span> <span class="cf">function</span>(r, n) {</span>
+<span id="cb1-20"><a href=""></a></span>
+<span id="cb1-21"><a href=""></a>  unnormalized_density <span class="ot">&lt;-</span> <span class="cf">function</span>(r, n) {</span>
+<span id="cb1-22"><a href=""></a>    (<span class="dv">1</span><span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>r<span class="sc">^</span><span class="dv">2</span>))<span class="sc">^</span>{<span class="sc">-</span>(n<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">2</span>} <span class="sc">/</span> (<span class="fu">sqrt</span>(n<span class="dv">-2</span>) <span class="sc">*</span> <span class="fu">beta</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, (n<span class="dv">-2</span>)<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb1-23"><a href=""></a>  }</span>
+<span id="cb1-24"><a href=""></a></span>
+<span id="cb1-25"><a href=""></a>  normalizing_constant_for_n <span class="ot">&lt;-</span> <span class="fu">integrate</span>(<span class="at">f =</span> unnormalized_density, <span class="at">lower =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> n)[[<span class="dv">1</span>]]</span>
+<span id="cb1-26"><a href=""></a></span>
+<span id="cb1-27"><a href=""></a>  <span class="fu">return</span>(<span class="fu">unnormalized_density</span>(r, n) <span class="sc">/</span> normalizing_constant_for_n)</span>
+<span id="cb1-28"><a href=""></a></span>
+<span id="cb1-29"><a href=""></a>}</span>
+<span id="cb1-30"><a href=""></a></span>
+<span id="cb1-31"><a href=""></a><span class="co"># Probability of observing correlation coefficient of at least .25:</span></span>
+<span id="cb1-32"><a href=""></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="fl">0.25</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">100</span>)</span>
+<span id="cb1-33"><a href=""></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="fl">0.25</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">20</span>)</span>
+<span id="cb1-34"><a href=""></a><span class="co"># In either sample sizes of 100 or 25, the probability of observing a </span></span>
+<span id="cb1-35"><a href=""></a></span>
+<span id="cb1-36"><a href=""></a><span class="co"># Had to correct for the normalizing constant...</span></span>
+<span id="cb1-37"><a href=""></a><span class="fu">integrate</span>(<span class="at">f =</span> cor_coef_density, <span class="at">lower =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">upper =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">20</span>)</span>
+<span id="cb1-38"><a href=""></a></span>
+<span id="cb1-39"><a href=""></a></span>
+<span id="cb1-40"><a href=""></a><span class="co"># Now check if it's right under a simulation study </span></span>
+<span id="cb1-41"><a href=""></a>n <span class="ot">&lt;-</span> <span class="dv">24</span>L</span>
+<span id="cb1-42"><a href=""></a>n_sims <span class="ot">&lt;-</span> <span class="dv">100000</span>L</span>
+<span id="cb1-43"><a href=""></a>observed_r <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> n_sims)</span>
+<span id="cb1-44"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_sims) {</span>
+<span id="cb1-45"><a href=""></a>  X <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> n)</span>
+<span id="cb1-46"><a href=""></a>  Y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> n)</span>
+<span id="cb1-47"><a href=""></a>  observed_r[i] <span class="ot">&lt;-</span> <span class="fu">cor</span>(X,Y)</span>
+<span id="cb1-48"><a href=""></a>}</span>
+<span id="cb1-49"><a href=""></a></span>
+<span id="cb1-50"><a href=""></a><span class="fu">sd</span>(observed_r)</span>
+<span id="cb1-51"><a href=""></a></span>
+<span id="cb1-52"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-53"><a href=""></a></span>
+<span id="cb1-54"><a href=""></a><span class="co"># looks like perhaps the approximation is slightly off? but it looks largely</span></span>
+<span id="cb1-55"><a href=""></a><span class="co"># correct — and importantly, it seems to covary with the population size in the</span></span>
+<span id="cb1-56"><a href=""></a><span class="co"># right way </span></span>
+<span id="cb1-57"><a href=""></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1-58"><a href=""></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb1-59"><a href=""></a>    <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">observed_r =</span> observed_r),</span>
+<span id="cb1-60"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> observed_r, <span class="at">y =</span> ..density..),</span>
+<span id="cb1-61"><a href=""></a>    <span class="at">bins =</span> <span class="dv">100</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span> </span>
+<span id="cb1-62"><a href=""></a>  <span class="fu">geom_line</span>(</span>
+<span id="cb1-63"><a href=""></a>    tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb1-64"><a href=""></a>      <span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="at">length.out=</span><span class="dv">1000</span>),</span>
+<span id="cb1-65"><a href=""></a>      <span class="at">y =</span> <span class="fu">cor_coef_density</span>(<span class="at">r =</span> x, <span class="at">n =</span> n)),</span>
+<span id="cb1-66"><a href=""></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y),</span>
+<span id="cb1-67"><a href=""></a>    <span class="at">linetype =</span> <span class="st">'solid'</span>, <span class="at">color =</span> <span class="st">'#16a085'</span>, <span class="at">linewidth=</span><span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span> </span>
+<span id="cb1-68"><a href=""></a>  <span class="fu">geom_vline</span>(</span>
+<span id="cb1-69"><a href=""></a>    <span class="at">xintercept =</span> <span class="fl">0.2088</span>,</span>
+<span id="cb1-70"><a href=""></a>    <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span> </span>
+<span id="cb1-71"><a href=""></a>  <span class="fu">annotate</span>(</span>
+<span id="cb1-72"><a href=""></a>    <span class="at">geom =</span> <span class="st">'label'</span>,</span>
+<span id="cb1-73"><a href=""></a>    <span class="at">label =</span> <span class="fu">expression</span>(sigma[r] <span class="sc">==</span> <span class="st">"0.2088"</span>),</span>
+<span id="cb1-74"><a href=""></a>    <span class="at">x =</span> .<span class="dv">35</span>,</span>
+<span id="cb1-75"><a href=""></a>    <span class="at">y =</span> <span class="fl">1.5</span>) <span class="sc">+</span> </span>
+<span id="cb1-76"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"observed sample correlation, r"</span>, <span class="at">y =</span> <span class="st">'density'</span>) <span class="sc">+</span> </span>
+<span id="cb1-77"><a href=""></a>  <span class="fu">ggtitle</span>(<span class="st">"Correlation of random normal variables under the null"</span>) <span class="sc">+</span> </span>
+<span id="cb1-78"><a href=""></a>  <span class="fu">theme_bw</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -874,10 +877,112 @@ f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
 <div class="footer">
 <p>Page 288</p>
 </div>
+</section></section>
+<section id="reflections" class="title-slide slide level1 center" data-background-color="black" data-background-image="https://source.unsplash.com/u21fFskAGZQ" data-background-opacity="30%">
+<h1>Reflections</h1>
+<div class="large">
+<p>So what do we think? <br></p>
+<p>Do we think he <span class="emphasis">genuinely found evidence</span> for a <span class="emphasis">common factor</span> shared by all forms/measures of intelligence? <br></p>
+<p>And if not, where did his reasoning go wrong? <br></p>
+</div>
+<aside class="notes">
+<p>I thought it was often hard to understand what he was saying, especially around the calculations. <span data-font-size="24px">Another Spearman 1904 work is available: <a href="https://archive.org/details/proofmeasurement00speauoft/mode/2up">The proof and measurement of association between two things</a></span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="reflections-1" class="title-slide slide level1 center" data-background-color="black" data-background-image="https://source.unsplash.com/u21fFskAGZQ" data-background-opacity="30%">
+<h1>Reflections</h1>
+<div>
+<ul>
+<li class="fragment">Merits:
+<ul>
+<li class="fragment">Asking teachers to rank their students on qualities like <span class="emphasis">“common sense”</span> and <span class="emphasis">“general impression”</span> was novel and what I would call an early ‘psychometric instrument.’</li>
+<li class="fragment">He was extraordinarily early in analyzing correlation matrices (though I’m not sure he formatted them like matrices) and recognizing their potential to have deeper structure.</li>
+<li class="fragment">His work raises interesting questions about where “intelligence” ends and other skills begin.</li>
+<li class="fragment">His literature review is fascinating.</li>
+</ul></li>
+<li class="fragment">Demerits:
+<ul>
+<li class="fragment">Though no fault of his own, the text can be a <strong>bit clunky</strong>, and I think that’s because he didn’t have the language we have now like “Let <span class="math inline">\(X\)</span> be a random variable.”</li>
+<li class="fragment">While he does at times seem to be careful about calling for more investigation into what the General Intelligence factor is, <em>he very quickly concludes that ‘General Intelligence’ “really exists.”</em></li>
+</ul></li>
+</ul>
+</div>
+</section>
+
+<section>
+<section id="contemporary-uses-of-factor-analysis" class="title-slide slide level1 center" data-background-color="#1C5253">
+<h1>Contemporary Uses of Factor Analysis</h1>
+<p>Factor analysis has since been used in many fields, but especially <span class="emphasis">psychology</span>. It is common to see factor analysis in survey analysis (Qualtrics has a <a href="https://www.qualtrics.com/experience-management/research/factor-analysis/">guide</a>).</p>
+<div class="fragment">
+<p>One workflow is to have respondents rate their agreement with a series of statements, then latent factors are identified from the responses using factor analysis, and factor scores describe <em>how much variance of each observed variable is explained by each of the latent factors</em>.</p>
+</div>
+<div class="fragment">
+<p>Spearman’s work only posited the existence of <strong>one</strong> common factor for intelligence measures, but after its development by Thurstone in the 1930-50s, <span class="emphasis">factor analysis with multiple factors is now common.</span></p>
+</div>
+
+<img data-src="https://www.thetaminusb.com/intro-measurement-r/images/efamodel.jpg" class="r-stretch quarto-figure-center"><p class="caption">From <a href="https://www.thetaminusb.com/intro-measurement-r/dimensionality.html" class="uri">https://www.thetaminusb.com/intro-measurement-r/dimensionality.html</a></p></section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="images/22_eod.png" class="r-stretch"><div class="small">
+<p>Krieger, N., Smith, K., Naishadham, D., Hartman, C., &amp; Barbeau, E. M. (2005). Experiences of discrimination: validity and reliability of a self-report measure for population health research on racism and health. Social science &amp; medicine (1982), 61(7), 1576–1596. <a href="https://doi.org/10.1016/j.socscimed.2005.03.006" class="uri">https://doi.org/10.1016/j.socscimed.2005.03.006</a></p>
+</div>
+</section></section>
+<section id="bartholomew-2007" class="title-slide slide level1 center" data-background-color="black" data-background-image="https://source.unsplash.com/_JBKdviweXI" data-background-opacity="30%">
+<h1>Bartholomew, 2007</h1>
+<p>Bartholomew, D. J. (2007). Three faces of factor analysis. In R. Cudeck &amp; R. C. MacCallum (Eds.), Factor analysis at 100: Historical developments and future directions (pp.&nbsp;9–21). Lawrence Erlbaum Associates Publishers.</p>
+
+<img data-src="images/23_bartholomew.png" width="550" class="r-stretch"></section>
+
+<section id="gould-1981" class="title-slide slide level1 center" data-background-color="#1C5253" data-background-image="https://source.unsplash.com/K5OLjMlPe4U" data-background-opacity="30%">
+<h1>Gould, 1981</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Gould, S. J. (1981). Mismeasure of Man. New York: Norton &amp; Company</p>
+<p>Chapter 6: The Real Error of Cyril Burt</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/0/05/Gouldmismeasure.jpg" width="150"> <img data-src="images/24_cyril_burt.png" width="550"></p>
+</div>
+</div>
+</section>
+
+<section id="michell-1997" class="title-slide slide level1 center" data-background-color="black" data-background-image="https://source.unsplash.com/75xPHEQBmvA" data-background-opacity="30%">
+<h1>Michell, 1997</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Michell, J. (2023). “Professor Spearman has drawn over-hasty conclusions”: Unravelling psychometrics’ “Copernican Revolution”. Theory &amp; Psychology, 33(5), 661–680. <a href="https://doi.org/10.1177/09593543231179446" class="uri">https://doi.org/10.1177/09593543231179446</a></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/25_michell.png" width="550"></p>
+</div>
+</div>
+</section>
+
+<section id="glymour-1998" class="title-slide slide level1 center" data-background-color="black" data-background-image="https://source.unsplash.com/G9i_plbfDgk" data-background-opacity="90%">
+<h1>Glymour, 1998</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Glymour, Clark. “What Went Wrong? Reflections on Science by Observation and the Bell Curve.” Philosophy of Science, vol.&nbsp;65, no. 1, 1998, pp.&nbsp;1–32. JSTOR, http://www.jstor.org/stable/188173.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/26_glymour.png" width="550"></p>
+</div>
+</div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</div>
+</section>
     </div>
   </div>
 
@@ -904,12 +1009,11 @@ f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1151,9 +1255,23 @@ f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
       });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
       const clipboard = new window.ClipboardJS('.code-copy-button', {
-        target: function(trigger) {
-          return trigger.previousElementSibling;
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
         }
       });
       clipboard.on('success', function(e) {
@@ -1189,10 +1307,9 @@ f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1201,9 +1318,18 @@ f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
           },
           interactive: true,
           interactiveBorder: 10,
-          theme: 'quarto-reveal',
-          placement: 'bottom-start'
+          theme: 'light-border',
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

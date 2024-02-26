@@ -15,9 +15,10 @@ format:
     pdf-separate-fragments: false
 ---
 
-
 ::: content-hidden
-$$
+\$\$
+
+```{=tex}
 \newcommand{\E}[0]{\mathbb{E}}
 \newcommand{\P}[0]{\mathbb{P}}
 \newcommand{\V}[0]{\mathbb{V}}
@@ -35,78 +36,73 @@ $$
 \newcommand{\dd}[2][]{\frac{\mathrm d#1}{\mathrm d#2}}
 \newcommand{\d}[0]{\mathrm d}
 \newcommand{\expit}[0]{\text{expit}}
+```
+\% 1 create conditionally independent symbol:
 
-% 1 create conditionally independent symbol:
+```{=tex}
 \newcommand\independent{\perp\!\!\!\perp}
 \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
-
+```
+```{=tex}
 \newcommand{\Var}[0]{\text{Var}}
 \newcommand{\Cov}[0]{\text{Cov}}
 \newcommand{\Cor}[0]{\text{Cor}}
 \newcommand{\e}[0]{\varepsilon}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
-
+```
+```{=tex}
 \newcommand{\argmax}[0]{\text{argmax}}
 \newcommand{\argmin}[0]{\text{argmin}}
-
+```
+```{=tex}
 \newcommand{\sumint}[0]{\;\;\;\mathclap{\displaystyle\int}\mathclap{\textstyle\sum} \;\;\;}
 \newcommand{\align}[1]{\begin{aligned} #1 \end{aligned}}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 \DeclareMathOperator*{\plim}{p-lim}
-
+```
 \require{mathtools}
-$$
+
+\$\$
 :::
 
-## {background-image="https://source.unsplash.com/CNBRg1K9QvQ" visibility="uncounted" data-background-opacity="0.5" data-background-color="black"}
+##  {background-image="https://source.unsplash.com/CNBRg1K9QvQ" visibility="uncounted" data-background-opacity="0.5" data-background-color="black"}
 
-::: {.title}
+::: title
 On Charles Spearman's 1904 work, "'General Intelligence,' Objectively Determined and Measured"
 :::
 
-::: {.author}
+::: author
 Christian Testa and Anne Brandes
 :::
 
-::: {.date}
+::: date
 `r format(Sys.time(), "%B %d, %Y")`
 :::
 
-::: {.notes}
-Why the chess background? 
+::: notes
+Why the chess background?
 
-Ability in chess is often perceived as a stereotypical 
-example of intelligence, but of course it's reasonable that 
-a great chess player may be lacking in other areas of life 
-such as social skills or emotional intelligence.
+Ability in chess is often perceived as a stereotypical example of intelligence, but of course it's reasonable that a great chess player may be lacking in other areas of life such as social skills or emotional intelligence.
 
-I'm not sure if we'll discuss "Emotional Intelligence" introduced 
-by Salovey and Mayer in 1990, but it's worth thinking about 
-where intelligence ends and other abilities begin as a limitation
-of the philosophy expressed by Spearman behind the "g" factor. 
+I'm not sure if we'll discuss "Emotional Intelligence" introduced by Salovey and Mayer in 1990, but it's worth thinking about where intelligence ends and other abilities begin as a limitation of the philosophy expressed by Spearman behind the "g" factor.
 :::
 
+# Introduction {background-color="#1C5253"}
 
-# Introduction {background-color="#1C5253" visibility="uncounted"}
-
-  - Who was Charles Spearman 
-  - What were his motivations in writing?
-  - Main arguments
+-   Who was Charles Spearman
+-   What were his motivations in writing?
+-   Main arguments
 
 ## Who was Charles Spearman?
 
-:::{.columns}
-:::{.column width="50%"}
-
-  - Known for his work in psychology, Spearman was born in London in 1863 and died in 1945. His most 
-  famous work was on [human intelligence]{.emphasis}
-  - He served in the army from 1883 to 1897, and then went to study at the University of Leipzig, where he was influenced by Wilhelm Wundt, the father of experimental psychology, or ["new psychology"]{.emphasis}
-    - I.e., used empirical methods instead of 
-    metaphysical reasoning
-  - He was recalled to the army during the Second Boer War and served as a general
-  - Somehow, amidst all this, he published 
-  his most famous work in [1904]{.emphasis}
+::: columns
+::: {.column width="50%"}
+-   Known for his work in psychology, Spearman was born in London in 1863 and died in 1945. His most famous work was on [human intelligence]{.emphasis}
+-   He served in the army from 1883 to 1897, and then went to study at the University of Leipzig, where he was influenced by Wilhelm Wundt, the father of experimental psychology, or ["new psychology"]{.emphasis}
+    -   I.e., used empirical methods instead of metaphysical reasoning
+-   He was recalled to the army during the Second Boer War and served as a general
+-   Somehow, amidst all this, he published his most famous work in [1904]{.emphasis}
 :::
 :::
 
@@ -118,47 +114,41 @@ Image from [Wikipedia: Charles Spearman](https://en.wikipedia.org/wiki/Charles_S
 
 ## Who was Charles Spearman?
 
-:::{.columns}
-:::{.column width="50%"}
-
-  - Spearman was heavily persuaded by Galton's work, particularly the 
-  creation of ["Co-relation"]{.emphasis} from 1888. 
-    - [See, for example, Stigler's 1989 article [Francis Galton's Account of the Invention of Correlation](https://www.jstor.org/stable/2245329?seq=5)]{.small}
-  - He was also influenced by the work of the French psychologist Alfred Binet, who was working on the first intelligence tests, e.g., ["intelligence quotients"]{.emphasis}
-  - His seminal 1904 work posits that intelligence rests on a single, general (latent) factor, which he called ["g"]{.emphasis}
-    - This was the first work in the field now called [factor analysis]{.emphasis}
-  - He also developed [rank correlation]{.emphasis}
+::: columns
+::: {.column width="50%"}
+-   Spearman was heavily persuaded by Galton's work, particularly the creation of ["Co-relation"]{.emphasis} from 1888.
+    -   [See, for example, Stigler's 1989 article [Francis Galton's Account of the Invention of Correlation](https://www.jstor.org/stable/2245329?seq=5)]{.small}
+-   He was also influenced by the work of the French psychologist Alfred Binet, who was working on the first intelligence tests, e.g., ["intelligence quotients"]{.emphasis}
+-   His seminal 1904 work posits that intelligence rests on a single, general (latent) factor, which he called ["g"]{.emphasis}
+    -   This was the first work in the field now called [factor analysis]{.emphasis}
+-   He also developed [rank correlation]{.emphasis}
 :::
 :::
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Exposition_universelle_de_1900_-_portraits_des_commissaires_g%C3%A9n%C3%A9raux-Edmund_Robert_Spearman.jpg/770px-Exposition_universelle_de_1900_-_portraits_des_commissaires_g%C3%A9n%C3%A9raux-Edmund_Robert_Spearman.jpg){.absolute top="10%" right="10%" width="30%"}
 
-
 ::: footer
 Image from [Wikipedia: Charles Spearman](https://en.wikipedia.org/wiki/Charles_Spearman)
 :::
-
 
 ## What were his motivations in writing?
 
-:::{.columns}
-:::{.column width='55%'}
+::: columns
+::: {.column width="55%"}
 :::
-:::{.column width='45%'}
-<br>
-<br>
 
-He sees psychology as an up-and-coming field, and yet 
-also a subject looked down-upon by the scientific community. 
+::: {.column width="45%"}
+<br> <br>
+
+He sees psychology as an up-and-coming field, and yet also a subject looked down-upon by the scientific community.
 
 <br><br>
 
-He's trying to make a case for psychology as a science, rooted in 
-data analysis and empirical methods.
+He's trying to make a case for psychology as a science, rooted in data analysis and empirical methods.
 :::
 :::
 
-![](images/1_intro.png){.absolute top='10%' left='0%'}
+![](images/1_intro.png){.absolute top="10%" left="0%"}
 
 ::: footer
 Page 202
@@ -166,46 +156,36 @@ Page 202
 
 ## What were his motivations in writing?
 
-:::{.columns}
-:::{.column width='55%'}
+::: columns
+::: {.column width="55%"}
 :::
-:::{.column width='45%'}
-<br>
-<br>
 
-He is making clear he intends to lay down the [scientific 
-foundations of psychology]{.emphasis}, which will be (implicitly) comparable to 
-Newton's equations of motion — 
+::: {.column width="45%"}
+<br> <br>
 
-<br>
-Especially with an eye towards 
-refuting the criticisms of psychology as puttering about. 
+He is making clear he intends to lay down the [scientific foundations of psychology]{.emphasis}, which will be (implicitly) comparable to Newton's equations of motion —
+
+<br> Especially with an eye towards refuting the criticisms of psychology as puttering about.
 :::
 :::
 
-![](images/2_weaknesses.png){.absolute width='50%' top='10%' left='0%'}
+![](images/2_weaknesses.png){.absolute width="50%" top="10%" left="0%"}
 
-::: footer 
+::: footer
 Page 203
 :::
 
-## What were his main arguments? 
+## What were his main arguments?
 
-:::{.columns}
-:::{.column width='45%'}
-<br><br>
-Spearman was analyzing data on children's performance across various school
-tests, and he found that the scores were correlated. 
-<br><br>
+::: columns
+::: {.column width="45%"}
+<br><br> Spearman was analyzing data on children's performance across various school tests, and he found that the scores were correlated. <br><br>
 
-In analyzing the data and their correlations, he hypothesized that 
-there was a [single, general factor]{.emphasis} that was responsible for the correlations
-and he called this [the "g" factor]{.emphasis}.
-
+In analyzing the data and their correlations, he hypothesized that there was a [single, general factor]{.emphasis} that was responsible for the correlations and he called this [the "g" factor]{.emphasis}.
 :::
 :::
 
-![](images/3_wiki_cor.png){.absolute top='10%' right='0%' width='40%'}
+![](images/3_wiki_cor.png){.absolute top="10%" right="0%" width="40%"}
 
 ::: footer
 Table from [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psychometrics%29)
@@ -213,67 +193,55 @@ Table from [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psyc
 
 ## What were his main arguments?
 
-![](images/4_aims.png){.absolute top='10%' left='0%' width='50%'}
+![](images/4_aims.png){.absolute top="10%" left="0%" width="50%"}
 
-![](images/5_spearman_model.jpg){.absolute top='50%' right='0%' width='40%'}
+![](images/5_spearman_model.jpg){.absolute top="50%" right="0%" width="40%"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/6/61/Chabris2007a.svg){.absolute top='10%' right='25%' width='25%'}
+![](https://upload.wikimedia.org/wikipedia/commons/6/61/Chabris2007a.svg){.absolute top="10%" right="25%" width="25%"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SpearmanFactors.svg/800px-SpearmanFactors.svg.png){.absolute top='10%' right='0%' height='35%'}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SpearmanFactors.svg/800px-SpearmanFactors.svg.png){.absolute top="10%" right="0%" height="35%"}
 
 ::: footer
 Page 205; [Wikipedia : g factor](https://en.wikipedia.org/wiki/G_factor_%28psychometrics%29)
 :::
 
-# So let's get into it {background-color="#1C5253" visibility="uncounted"}
+# So let's get into it {background-color="#1C5253"}
 
-:::{.incremental .large}
-  - What was the [structure]{.emphasis2} of his 1904 paper?
-  - What [data]{.emphasis2} did he use?
-  - What were the [methodological innovations]{.emphasis2}? 
-  - How did he [interpret]{.emphasis2} his findings?
-  - What were the [implications]{.emphasis2} of his work?
+::: {.incremental .large}
+-   What was the [structure]{.emphasis2} of his 1904 paper?
+-   What [data]{.emphasis2} did he use?
+-   What were the [methodological innovations]{.emphasis2}?
+-   How did he [interpret]{.emphasis2} his findings?
+-   What were the [implications]{.emphasis2} of his work?
 :::
-
 
 ## Plan for the rest of the slides
 
-- Go over the rest of the 1904 paper 
-- Have a section on contemporary uses of factor analysis
-- Discuss the Bartholomew, Gould, Michell, and possibly Glymour papers
+-   Go over the rest of the 1904 paper
+-   Have a section on contemporary uses of factor analysis
+-   Discuss the Bartholomew, Gould, Michell, and possibly Glymour papers
 
 # Structure of Spearman, 1904
 
-After his introduction to the state of psychology and
-prior work, Spearman lays out his analysis plan for 
-data collected on school children's performance in **"discrimination"**
-and **"intelligence"** tests. 
+After his introduction to the state of psychology and prior work, Spearman lays out his analysis plan for data collected on school children's performance in **"discrimination"** and **"intelligence"** tests.
 
-He covers some preliminarys on 
-how to calculate correlation coefficients, including a
-method for **"elimiation of observational errors"**
-and **"elimination of irrelevant factors."** (It's in Chapter II that he 
-introduces rank correlation).
+He covers some preliminarys on how to calculate correlation coefficients, including a method for **"elimiation of observational errors"** and **"elimination of irrelevant factors."** (It's in Chapter II that he introduces rank correlation).
 
-For a series of experiments, he presents the results of his 
-correlational analyses 
-with particular emphasis on 1) *detrending for age*, and 2) 
-investigating *which of the tests are correlated with each other*.
+For a series of experiments, he presents the results of his correlational analyses with particular emphasis on 1) *detrending for age*, and 2) investigating *which of the tests are correlated with each other*.
 
-Finally, he concludes with an analysis of the **"General Intelligence"
-factor**. 
+Finally, he concludes with an analysis of the **"General Intelligence" factor**.
 
 ## State of the art in 1904
 
-![](images/6_state_of_art0.png){fig-align='center'}
+![](images/6_state_of_art0.png){fig-align="center"}
 
-::: footer 
+::: footer
 Page 208
 :::
 
 ## State of the art in 1904
 
-![](images/6_state_of_art1.png){fig-align='center'}
+![](images/6_state_of_art1.png){fig-align="center"}
 
 ::: footer
 Page 217
@@ -281,7 +249,7 @@ Page 217
 
 ## State of the art in 1904
 
-![](images/6_state_of_art2.png){.absolute top='20%' }
+![](images/6_state_of_art2.png){.absolute top="20%"}
 
 ::: footer
 Page 211
@@ -289,7 +257,7 @@ Page 211
 
 ## State of the art in 1904
 
-![](images/6_state_of_art3.png){.absolute top='10%' left='15%'}
+![](images/6_state_of_art3.png){.absolute top="10%" left="15%"}
 
 ::: footer
 Page 235
@@ -297,7 +265,7 @@ Page 235
 
 ## State of the art in 1904
 
-![](images/6_state_of_art4.png){.absolute top='10%' left='20%'}
+![](images/6_state_of_art4.png){.absolute top="10%" left="20%"}
 
 ::: footer
 Page 211
@@ -305,7 +273,7 @@ Page 211
 
 ## State of the art in 1904
 
-![](images/6_state_of_art5.png){.absolute top='10%' left='25%'}
+![](images/6_state_of_art5.png){.absolute top="10%" left="25%"}
 
 ::: footer
 Page 218
@@ -315,35 +283,32 @@ Page 218
 
 Spearman collected the following data:
 
-  - Experiment I used the 24 oldest children tested in **Light**, **Weight**, and **Sound**
-  - Experiment II used the next 36 oldest children with tests only on **Sound**, *interviewed collectively*.
-  - Experiment III on **Sight** and **Weight** discrimination among boys from a preparatory school
-  - Experiment IV on **Sound** only in the high class preparatory school boys, with only particular intervals tested
-  - Experiment V, similar to experiment I with boys and girls, but aiming for **higher variation** 
-  rather than homogeneity 
+-   Experiment I used the 24 oldest children tested in **Light**, **Weight**, and **Sound**
+-   Experiment II used the next 36 oldest children with tests only on **Sound**, *interviewed collectively*.
+-   Experiment III on **Sight** and **Weight** discrimination among boys from a preparatory school
+-   Experiment IV on **Sound** only in the high class preparatory school boys, with only particular intervals tested
+-   Experiment V, similar to experiment I with boys and girls, but aiming for **higher variation** rather than homogeneity
 
-## Intelligence Measures 
+## Intelligence Measures
 
-  - Examination scores and school rankings were thought to reveal ["Present Capacity"]{.emphasis}
-  - School rankings divided by age were dubbed ["Native Capacity"]{.emphasis}
-  - Teachers were asked to rank students based on their ["general impression"]{.emphasis}
-  (e.g., based on if they seemed "bright", "average", "dull")
-  - Using a similar technique, the oldest of the children of Series I was  asked to rank peer students based on their ["common sense"]{.emphasis}, and then the next oldest child was asked to do the same. 
+-   Examination scores and school rankings were thought to reveal ["Present Capacity"]{.emphasis}
+-   School rankings divided by age were dubbed ["Native Capacity"]{.emphasis}
+-   Teachers were asked to rank students based on their ["general impression"]{.emphasis} (e.g., based on if they seemed "bright", "average", "dull")
+-   Using a similar technique, the oldest of the children of Series I was asked to rank peer students based on their ["common sense"]{.emphasis}, and then the next oldest child was asked to do the same.
 
-## Correlation 
+## Correlation
 
-![](images/7_correlation.png){.absolute top='10%' left='15%' width='75%'}
-![](images/7_correlation2.png){.absolute top='50%' left='15%' width='75%'}
+![](images/7_correlation.png){.absolute top="10%" left="15%" width="75%"} ![](images/7_correlation2.png){.absolute top="50%" left="15%" width="75%"}
 
-::: footer 
-Page 252 
+::: footer
+Page 252
 :::
 
 ## Correlation — Elimination of Observational Errors
 
-![](images/7_cor_correct1.png){.absolute top='10%' left='15%' width='75%'}
+![](images/7_cor_correct1.png){.absolute top="10%" left="15%" width="75%"}
 
-::: footer 
+::: footer
 Page 253
 :::
 
@@ -351,36 +316,34 @@ Page 253
 
 ![](images/7_cor_correct2.png)
 
-::: footer 
+::: footer
 Page 256
 :::
 
-# Results (intermangled with Interpretation)  {background-color="#1C5253" visibility="uncounted"}
+# Results (intermangled with Interpretation) {background-color="#1C5253"}
 
-## Experiment I 
+## Experiment I
 
-![](images/8_results.png){.absolute top='10%' left='15%' width='75%'}
+![](images/8_results.png){.absolute top="10%" left="15%" width="75%"}
 
 ## Let's Check His Math
 
 What is the "probable error" of a correlation coefficient?
 
-:::{.fragment}
-I'm not immediately sure about the distribution for Spearman's rank correlation 
-coefficient, but Pearson's product-moment correlation has a known distribution.
+::: fragment
+I'm not immediately sure about the distribution for Spearman's rank correlation coefficient, but Pearson's product-moment correlation has a known distribution.
 :::
 
-:::{.fragment}
-The distribution for a sample correlation coefficient for correlated
-random normal variables is a little bit crazy...
+::: fragment
+The distribution for a sample correlation coefficient for correlated random normal variables is a little bit crazy...
 
 $$
 f(r) = \frac{(n-2) \Gamma(n-1)(1 - \rho^2)^{\frac{n-1}{2}} (1-r^2)^{\frac{n-4}{2}}}{ \sqrt{2\pi} \Gamma(n-\frac{1}{2})(1-\rho r)^{n - \frac{3}{2}} } {}_{2}{F}_1\left(\frac{1}{2}, \frac{1}{2}; \frac{1}{2}(2n-1); \frac{1}{2}(\rho r + 1)\right)
 $$
 :::
 
-:::{.fragment}
-But for uncorrelated variables (the null hypothesis), the distribution is much simpler: 
+::: fragment
+But for uncorrelated variables (the null hypothesis), the distribution is much simpler:
 
 $$
 f(r) = \frac{\left( \frac{1}{1-r^2}\right)^{-\frac{n-1}{2}}}{
@@ -397,8 +360,8 @@ From <https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Using_the_ex
 
 ## Checking his math
 
-:::{.columns}
-:::{.column width='50%'}
+::: columns
+::: {.column width="50%"}
 ```{r}
 #| echo: true
 #| eval: false
@@ -485,28 +448,27 @@ ggplot() +
 :::
 :::
 
-![](images/9_math_checking.png){.absolute top='10%' right='0%' width='50%'}
+![](images/9_math_checking.png){.absolute top="10%" right="0%" width="50%"}
 
 ## Adjusting for "irrelevant factors"
 
-![](images/10_adjustment.png){.absolute top='10%' left='15%' width='75%'}
-![](images/10_adjustment2.png){.absolute top='45%' left='15%' width='75%'}
+![](images/10_adjustment.png){.absolute top="10%" left="15%" width="75%"} ![](images/10_adjustment2.png){.absolute top="45%" left="15%" width="75%"}
 
 ::: footer
 Page 261-262
 :::
 
-## Conclusions from Experiment I 
+## Conclusions from Experiment I
 
-![](images/11_correlation.png){.absolute top='10%' left='15%' width='75%'}
+![](images/11_correlation.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 263
 :::
 
-## Experiment II 
+## Experiment II
 
-![](images/12_experiment2.png){.absolute top='10%' left='15%' width='75%'}
+![](images/12_experiment2.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 264
@@ -514,7 +476,7 @@ Page 264
 
 ## Experiment III
 
-![](images/13_experiment3.png){.absolute top='10%' left='15%' width='75%'}
+![](images/13_experiment3.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 265
@@ -522,31 +484,31 @@ Page 265
 
 ## Experiment IV
 
-![](images/14_experiment4.png){.absolute top='10%' left='15%' width='75%'}
+![](images/14_experiment4.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 265
 :::
 
-## Conclusions of Experiments 
+## Conclusions of Experiments
 
-![](images/15_conclusions.png){.absolute top='10%' left='15%' width='75%'}
+![](images/15_conclusions.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 268
 :::
 
-## Interpretation 
+## Interpretation
 
-![](images/18_gi_gd.png){.absolute top='10%' left='15%' width='75%'}
+![](images/18_gi_gd.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 269
 :::
 
-## Conclusions of Experiments 
+## Conclusions of Experiments
 
-![](images/16_conclusions.png){.absolute top='10%' left='15%' width='75%'}
+![](images/16_conclusions.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 272
@@ -554,7 +516,7 @@ Page 272
 
 ## A "Theorem"
 
-![](images/17_theorem.png){.absolute top='10%' left='15%' width='75%'}
+![](images/17_theorem.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 273
@@ -562,7 +524,7 @@ Page 273
 
 ## Hierarchy of Factors
 
-![](images/19_hierarchy1.png){.absolute top='10%' left='15%' width='75%'}
+![](images/19_hierarchy1.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 274
@@ -570,57 +532,158 @@ Page 274
 
 ## Hierarchy of Factors
 
-![](images/19_hierarchy2.png){.absolute top='10%' left='15%' width='75%'}
+![](images/19_hierarchy2.png){.absolute top="10%" left="15%" width="75%"}
 
-::: footer 
+::: footer
 Page 275
 :::
 
 ## Hierarchy of Factors
 
-![](images/19_hierarchy3.png){.absolute top='10%' left='15%' width='75%'}
+![](images/19_hierarchy3.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 276
 :::
 
-## His Discussion 
+## His Discussion
 
-![](images/20_discussion.png){.absolute top='10%' left='15%' width='75%'}
-
-::: footer 
-Page 284
-:::
-
-## His Discussion 
-
-![](images/20_discussion2.png){.absolute top='10%' left='15%' width='75%'}
+![](images/20_discussion.png){.absolute top="10%" left="15%" width="75%"}
 
 ::: footer
 Page 284
 :::
 
+## His Discussion
 
-## Appendix 
+![](images/20_discussion2.png){.absolute top="10%" left="15%" width="75%"}
 
-![](images/21_appendix.png){.absolute top='10%' left='15%'}
+::: footer
+Page 284
+:::
 
-::: footer 
+## Appendix
+
+![](images/21_appendix.png){.absolute top="10%" left="15%"}
+
+::: footer
 Page 286
 :::
 
-## Appendix 
+## Appendix
 
-![](images/21_appendix2.png){.absolute top='10%' left='15%'}
+![](images/21_appendix2.png){.absolute top="10%" left="15%"}
 
-::: footer 
+::: footer
 Page 287
 :::
 
-## Appendix 
+## Appendix
 
-![](images/21_appendix3.png){.absolute top='10%' left='15%' }
+![](images/21_appendix3.png){.absolute top="10%" left="15%"}
 
-::: footer 
+::: footer
 Page 288
+:::
+
+# Reflections {background-color="black" background-image="https://source.unsplash.com/u21fFskAGZQ" data-background-opacity="30%"}
+
+:::{.large}
+So what do we think? <br>
+
+Do we think he [genuinely found evidence]{.emphasis} for a [common factor]{.emphasis} shared by all forms/measures of intelligence? <br>
+
+And if not, where did his reasoning go wrong? <br>
+:::
+
+:::{.notes}
+I thought it was often hard to understand what he was saying, especially around the calculations.
+[Another Spearman 1904 work is available: [The proof and measurement of association between two things](https://archive.org/details/proofmeasurement00speauoft/mode/2up)]{font-size='24px'}
+:::
+
+# Reflections {background-color="black" background-image="https://source.unsplash.com/u21fFskAGZQ" data-background-opacity="30%"}
+
+::: incremental
+-   Merits:
+    -   Asking teachers to rank their students on qualities like ["common sense"]{.emphasis} and ["general impression"]{.emphasis} was novel and what I would call an early 'psychometric instrument.'
+    -   He was extraordinarily early in analyzing correlation matrices (though I'm not sure he formatted them like matrices) and recognizing their potential to have deeper structure.
+    -   His work raises interesting questions about where "intelligence" ends and other skills begin.
+    - His literature review is fascinating.
+-   Demerits:
+    -   Though no fault of his own, the text can be a **bit clunky**, and I think that's because he didn't have the language we have now like "Let $X$ be a random variable."
+    -   While he does at times seem to be careful about calling for more investigation into what the General Intelligence factor is, *he very quickly concludes that 'General Intelligence' "really exists."*
+:::
+
+# Contemporary Uses of Factor Analysis {background-color="#1C5253"}
+
+Factor analysis has since been used in many fields, but especially 
+[psychology]{.emphasis}. 
+It is common to see factor analysis 
+in survey analysis (Qualtrics has a [guide](https://www.qualtrics.com/experience-management/research/factor-analysis/)).
+
+:::{.fragment}
+One workflow is to have respondents rate their agreement with a series of
+statements, then latent factors are identified from the responses using factor
+analysis, and factor scores describe *how much variance of each observed
+variable is explained
+by each of the latent factors*.
+:::
+
+:::{.fragment}
+Spearman's work only posited the existence of **one** common 
+factor for intelligence measures, but after its development by 
+Thurstone in the 1930-50s, [factor analysis with multiple factors
+is now common.]{.emphasis}
+:::
+
+![From <https://www.thetaminusb.com/intro-measurement-r/dimensionality.html>](https://www.thetaminusb.com/intro-measurement-r/images/efamodel.jpg)
+
+## Example 
+
+![](images/22_eod.png)
+
+:::{.small}
+Krieger, N., Smith, K., Naishadham, D., Hartman, C., & Barbeau, E. M. (2005). Experiences of discrimination: validity and reliability of a self-report measure for population health research on racism and health. Social science & medicine (1982), 61(7), 1576–1596. <https://doi.org/10.1016/j.socscimed.2005.03.006>
+:::
+
+# Bartholomew, 2007 {background-color="black" data-background-image='https://source.unsplash.com/_JBKdviweXI' data-background-opacity='30%'}
+
+Bartholomew, D. J. (2007). Three faces of factor analysis. In R. Cudeck & R. C. MacCallum (Eds.), Factor analysis at 100: Historical developments and future directions (pp. 9–21). Lawrence Erlbaum Associates Publishers.
+
+![](images/23_bartholomew.png){width='550px'}
+
+# Gould, 1981  {background-color="#1C5253" data-background-image="https://source.unsplash.com/K5OLjMlPe4U" data-background-opacity='30%'}
+
+:::{.columns}
+:::{.column width="50%"}
+Gould, S. J. (1981). Mismeasure of Man. New York: Norton & Company
+
+Chapter 6: The Real Error of Cyril Burt
+:::
+:::{.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/en/0/05/Gouldmismeasure.jpg){width='150px'}
+![](images/24_cyril_burt.png){width='550px'}
+:::
+:::
+
+# Michell, 1997 {background-color="black" data-background-image='https://source.unsplash.com/75xPHEQBmvA' data-background-opacity='30%'}
+
+:::{.columns}
+:::{.column width='50%'}
+Michell, J. (2023). “Professor Spearman has drawn over-hasty conclusions”: Unravelling psychometrics’ “Copernican Revolution”. Theory & Psychology, 33(5), 661–680. <https://doi.org/10.1177/09593543231179446>
+:::
+:::{.column width='50%'}
+![](images/25_michell.png){width='550px'}
+:::
+:::
+
+# Glymour, 1998 {background-color="black" data-background-image='https://source.unsplash.com/G9i_plbfDgk' data-background-opacity='90%'}
+
+:::{.columns}
+:::{.column width='50%'}
+Glymour, Clark. “What Went Wrong? Reflections on Science by Observation and the Bell Curve.” Philosophy of Science, vol. 65, no. 1, 1998, pp. 1–32. JSTOR, http://www.jstor.org/stable/188173. 
+:::
+:::{.column width='50%'}
+![](images/26_glymour.png){width='550px'}
+:::
 :::
