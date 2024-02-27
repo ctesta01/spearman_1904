@@ -5,7 +5,7 @@
 Brief Description: 
 
 Spearman introduced his theory of "General Intelligence" at the same time as 
-he did what is widely considered the first factor analysis in his 1904. 
+he did what is widely considered the first factor analysis in his 1904 work. 
 
 Spearman's work was pioneering and yet often problematic. He later posited that
 "general intelligence" was something physically real and he advanced eugenic
